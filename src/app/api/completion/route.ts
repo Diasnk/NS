@@ -21,7 +21,16 @@ export async function POST(req: Request) {
       {
         role: 'user',
         content: `Analyze given note and detect the mistakes made by me and what I need to learn. Also provide 3 useful links to learn the concepts. 
-Respond with a JSON object that look like {mistakes, further learning, links}. 'links' shold be wrapped in array. Only respond with an JSON object. Post content:
+Respond with a next format:  
+<h1 style="font-weight: 700; margin-bottom: 6px; margin-top: 6px; color: #003566; font-size: 28px;">Mistakes</h1>
+<p>mistakes that was made by me</p>
+<h1 style="font-weight: 700; margin-bottom: 6px; margin-top: 6px; color: #003566; font-size: 28px;">Further learning</h1>
+<p>topics that I need to learn</p>
+<h1 style="font-weight: 700; margin-bottom: 6px; margin-top: 6px; color: #003566; font-size: 28px;">Resources</h1>
+<a href="link">link</a>
+<a href="link">link</a>
+<a href="link">link</a>.
+Post content:
 ${prompt}
         
 Output:\n`,
