@@ -1,10 +1,10 @@
 "use client";
 
-import { useChat, Message } from "ai/react";
+import { useCompletion } from "ai/react";
 
 export default function Features({path, text}: {path: string, text: string}) {
   // usechat -> handles messages for us, user input, handling user submits, etc.
-  const { input, handleInputChange, handleSubmit, messages } = useChat({
+  const { completion, input, handleInputChange, handleSubmit} = useCompletion({
     api: path
   });
 
@@ -37,36 +37,9 @@ export default function Features({path, text}: {path: string, text: string}) {
           {text}
         </button>
       </form>
-      {/* Text Messages */}
-      {/* {messages.map(message => <p key={message.id}>{message.content}</p>)} */}
-      {messages.map((message: Message) => {
-        return (
-          <div className="w-full mt-10 first-letter:text-5xl first-letter:text-[#003566] first-letter:font-semibold first-letter:mr-1 first-letter:float-left" key={message.id}>
-            {message.content
-              .split("/n")
-              .map((currentTextBlocks: string, index: number) => {
-                if (currentTextBlocks === "") {
-                  return <p key={message.id + index}>&nbsp;</p>;
-                } else {
-                  return (
-                    <div className="w-full" key={message.id}>
-                      {message.role == "user" ? (
-                        <></>
-                      ) : (
-                        <p
-                          className="text-md"
-                          key={message.id + index}
-                        >
-                          {currentTextBlocks}
-                        </p>
-                      )}
-                    </div>
-                  );
-                }
-              })}
-          </div>
-        );
-      })}
+        <div className="w-full mt-10 first-letter:text-5xl first-letter:text-[#003566] first-letter:font-semibold first-letter:mr-1 first-letter:float-left">
+            {completion}
+        </div>
     </div>
   );
 }

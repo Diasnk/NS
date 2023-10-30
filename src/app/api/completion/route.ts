@@ -20,7 +20,8 @@ export async function POST(req: Request) {
     messages: [
       {
         role: 'user',
-        content: `You need to shorten the user's conspect and make it easy to understand for anyone who knows nothing about the topic. Provide at least 3 reliable links to further exploration. Note content:
+        content: `Analyze given note and detect the mistakes made by me and what I need to learn. Also provide 3 useful links to learn the concepts. 
+Respond with a JSON object that look like {mistakes, further learning, links}. 'links' shold be wrapped in array. Only respond with an JSON object. Post content:
 ${prompt}
         
 Output:\n`,

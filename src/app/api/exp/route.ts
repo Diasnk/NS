@@ -1,41 +1,39 @@
-import { Configuration, OpenAIApi } from "openai-edge";
-import { OpenAIStream, StreamingTextResponse } from "ai";
-
-export const runtime = "edge"; //  Provide optimal infrastructure for our OpenAIroute (https://edge-runtime.vercel.app/)
-
-const config = new Configuration({
+// app/api/completion/route.ts
+import OpenAI from 'openai';
+import { OpenAIStream, StreamingTextResponse } from 'ai';
+ 
+export const runtime = 'edge';
+ 
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-
-const openai = new OpenAIApi(config);
-
-export async function POST(request: Request) {
-  const { messages } = await request.json();
-
-  // messages [{user and he says "hello there"}]
-  console.log(messages);
-
-  // GPT-4 a system message
-  // system messagetells GPT-4 how to act
-  // it should always be at the front of your array
-
-  // createChatComplition (get response from GPT-4)
-  const response = await openai.createChatCompletion({
-    model: "gpt-3.5-turbo",
+ 
+export async function POST(req: Request) {
+  // Extract the `prompt` from the body of the request
+  const { prompt } = await req.json();
+ 
+  // Request the OpenAI API for the response based on the prompt
+  const response = await openai.chat.completions.create({
+    model: 'gpt-3.5-turbo',
     stream: true,
+    // a precise prompt is important for the AI to reply with the correct tokens
     messages: [
       {
-        role: "system",
-        content:
-          "You need to explain the topic given by user as if he was 10 years old kid. Use and explain the key words and terms",
+        role: 'user',
+        content: `You need to explain the topic given by user as if he was 10 years old kid. Use and explain the key words and terms. Topic is:
+${prompt}
+        
+Output:\n`,
       },
-      ...messages,
     ],
-    max_tokens: 256,
+    max_tokens: 200,
+    temperature: 0, // you want absolute certainty for spell check
+    top_p: 1,
+    frequency_penalty: 1,
+    presence_penalty: 1,
   });
-  // create a strem of data from OenAI (stream data to the frontend)
-  const stream = await OpenAIStream(response);
-
-  // send the strem as a response to our client / frontend
+ 
+  const stream = OpenAIStream(response);
+ 
   return new StreamingTextResponse(stream);
 }
