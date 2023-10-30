@@ -5,7 +5,7 @@ import { FiHelpCircle } from 'react-icons/fi'
 export default function About() {
     return (
         <div className="mt-8 mx-6 grid">
-            <h1 className="text-3xl mb-10 text-center font-bold">ABOUT FEINAPP</h1>
+            <h1 className="text-3xl mb-10 text-center font-bold">ABOUT FEYNAPP</h1>
             <div className='grid grid-cols-2 gap-10'>
 
                 <div className="mb-10">
@@ -32,7 +32,7 @@ export default function About() {
                 <div className="mb-10">
                     <h1 className="font-bold text-2xl mb-4 flex items-center gap-2"><FiHelpCircle className="text-[#003566]" />About website</h1>
                     <p>
-                    FeinApp - is a platform aimed at helping people, who work with data and have difficulties processing it. FeinApp allows you to analyze, correct, and write notes based on your request using AI.
+                    FeynApp - is a platform aimed at helping people, who work with data and have difficulties processing it. FeinApp allows you to analyze, correct, and write notes based on your request using AI.
                     </p>
                 </div>
             </div>
