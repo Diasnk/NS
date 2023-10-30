@@ -1,11 +1,11 @@
-import SimplifyComponent from "@/components/simplifyComponent";
+import Features from "@/components/Features";
 import Image from "next/image";
 
 export default function Explain() {
   return (
     <>
       <div>
-        <SimplifyComponent/>
+        <Features path="api/simp" text="Simplify"/>
       </div>
     </>
   );

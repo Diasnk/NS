@@ -1,11 +1,11 @@
-import ExplanationComponent from "@/components/explanationComponent";
+import Features from "@/components/Features";
 import Image from "next/image";
 
 export default function Explain() {
   return (
     <>
       <div>
-        <ExplanationComponent/>
+      <Features path="api/exp" text="Explain"/>
       </div>
     </>
   );
