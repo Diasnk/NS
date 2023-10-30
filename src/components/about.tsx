@@ -1,6 +1,7 @@
 import { PiTargetBold } from 'react-icons/pi'
 import { FiHelpCircle } from 'react-icons/fi'
-
+import { TfiLightBulb } from 'react-icons/tfi'
+import { FiRefreshCcw } from 'react-icons/fi'
 
 export default function About() {
     return (
@@ -24,13 +25,13 @@ export default function About() {
                 </div>
 
                 <div className="mb-10 ">
-                    <h1 className="font-bold text-2xl mb-4 flex items-center gap-2"><PiTargetBold className="text-[#003566]" />Our mission</h1>
+                    <h1 className="font-bold text-2xl mb-4 flex items-center gap-2"><TfiLightBulb className="text-[#003566]" />Our mission</h1>
                     <p>
                         We aim to facilitate the learning process by using an AI-based request system and making the learning process more productive. FeinApp allows you to analyze the learning process, correct mistakes made while using the platform, and receive high-quality feedback on your works
                     </p>
                 </div>
                 <div className="mb-10">
-                    <h1 className="font-bold text-2xl mb-4 flex items-center gap-2"><FiHelpCircle className="text-[#003566]" />About website</h1>
+                    <h1 className="font-bold text-2xl mb-4 flex items-center gap-2"><FiRefreshCcw className="text-[#003566]" />About website</h1>
                     <p>
                     FeynApp - is a platform aimed at helping people, who work with data and have difficulties processing it. FeinApp allows you to analyze, correct, and write notes based on your request using AI.
                     </p>
