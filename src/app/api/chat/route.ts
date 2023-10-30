@@ -25,7 +25,7 @@ export async function POST(request: Request){
         model: 'gpt-3.5-turbo',
         stream: true,
         messages: [
-        {role:"system", content: ''},
+        {role:"system", content: 'You need to explain the topic given by user as if he was 5 years old kid. Use and explain the key words and terms.'},
             ...messages
         ],
         max_tokens: 256,
