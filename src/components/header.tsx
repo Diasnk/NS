@@ -6,7 +6,7 @@ import {BiSolidGroup} from 'react-icons/bi'
 export default function Header() {
     return (
         <>
-            <div className="flex mx-6 mt-4 items-center justify-between">
+            <div className="flex px-6 py-4 items-center justify-between w-full backdrop-blur-lg">
                 <div className="flex items-center text-center gap-4 md:gap-10">
                     <Link href="./" className="font-bold">
                         FeynApp

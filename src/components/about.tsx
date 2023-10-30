@@ -4,7 +4,7 @@ import { FiHelpCircle } from 'react-icons/fi'
 
 export default function About() {
     return (
-        <div className="mt-8 mx-6 grid">
+        <div className="mx-6 grid">
             <h1 className="text-3xl mb-10 text-center font-bold">ABOUT FEYNAPP</h1>
             <div className='grid grid-cols-2 gap-10'>
 
