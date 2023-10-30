@@ -14,7 +14,7 @@ export default function SimplifyComponent() {
             {/* {messages.map(message => <p key={message.id}>{message.content}</p>)} */}
             {messages.map((message: Message) => {
                 return (
-                    <div className="w-full text-lg" key={message.id}>
+                    <div className="w-full" key={message.id}>
                         {/* Message (Formatting) */}
 
                         {message.content.split("/n").map((currentTextBlocks: string, index: number) => {
