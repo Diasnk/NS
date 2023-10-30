@@ -24,15 +24,18 @@ export async function POST(request: Request) {
     model: "gpt-3.5-turbo",
     stream: true,
     messages: [
-        {role:"system", content: 'You need to explain the topic given by user as if he was 10 years old kid. Use and explain the key words and terms.'},
-            ...messages
-        ],
+      {
+        role: "system",
+        content:
+          "You need to explain the topic given by user as if he was 10 years old kid. Use and explain the key words and terms",
+      },
+      ...messages,
+    ],
     max_tokens: 256,
   });
   // create a strem of data from OenAI (stream data to the frontend)
   const stream = await OpenAIStream(response);
 
-    // send the strem as a response to our client / frontend
-    return new StreamingTextResponse(stream);
+  // send the strem as a response to our client / frontend
+  return new StreamingTextResponse(stream);
 }
-

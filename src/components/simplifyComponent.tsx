@@ -3,9 +3,9 @@
 import { useChat, Message } from "ai/react"
 
 
-export default function ExplanationComponent() {
+export default function SimplifyComponent() {
     // usechat -> handles messages for us, user input, handling user submits, etc.
-    const { input, handleInputChange, handleSubmit, messages } = useChat({api: '/api/exp'})
+    const { input, handleInputChange, handleSubmit, messages } = useChat({api: '/api/simp'})
 
     // console.log(input)
     return (
