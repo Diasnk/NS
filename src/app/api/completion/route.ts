@@ -21,7 +21,7 @@ export async function POST(req: Request) {
       {
         role: 'user',
         content: `Analyze given note and detect the mistakes made by me and what I need to learn. Also provide 3 useful links to learn the concepts. 
-Respond with a next format:  
+Respond with a next format. Use only the following format. Do not change the styling and tags:  
 <h1 style="font-weight: 700; margin-bottom: 6px; margin-top: 6px; color: #003566; font-size: 28px;">Mistakes</h1>
 <p>mistakes that was made by me</p>
 <h1 style="font-weight: 700; margin-bottom: 6px; margin-top: 6px; color: #003566; font-size: 28px;">Further learning</h1>
@@ -36,7 +36,7 @@ ${prompt}
 Output:\n`,
       },
     ],
-    max_tokens: 200,
+    max_tokens: 512,
     temperature: 1, 
     top_p: 1,
     frequency_penalty: 1,
