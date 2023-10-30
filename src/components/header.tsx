@@ -8,8 +8,8 @@ export default function Header() {
         <>
             <div className="flex mx-6 mt-4 items-center justify-between">
                 <div className="flex items-center text-center gap-4 md:gap-10">
-                    <Link href="./">
-                        <Image src="./logo.svg" alt="logo" height={25} width={75} />
+                    <Link href="./" className="font-bold">
+                        FeynApp
                     </Link>
                     <div className="flex md:gap-3 gap-2 md:text-md text-sm font-medium ">
                         <Link className="hover:underline-offset-2 hover:underline" href="./feedback">Feedback</Link>

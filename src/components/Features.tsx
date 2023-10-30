@@ -10,10 +10,10 @@ export default function Features({path, text}: {path: string, text: string}) {
 
   // console.log(input)
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="md:max-w-4xl mx-auto">
         <h1 className="text-center mt-10 font-bold text-3xl">{text} your note!</h1>
       <form
-        className="mt-10"
+        className="mt-10 mx-6"
         onSubmit={handleSubmit}
       >
         {/* <p>Messages</p> */}
@@ -33,7 +33,7 @@ export default function Features({path, text}: {path: string, text: string}) {
         />
       )
       }
-        <button className="rounded-md bg-[#003566] text-white transition-all p-2 mt-2">
+        <button className="rounded-md bg-[#003566] text-white transition-all px-4 py-2 mt-2">
           {text}
         </button>
       </form>

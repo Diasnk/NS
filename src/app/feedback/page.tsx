@@ -3,14 +3,9 @@ import { useCompletion } from "ai/react";
 
 export default function Home() {
   // usechat -> handles messages for us, user input, handling user submits, etc.
-  const { completion, handleSubmit, input, handleInputChange } =
-    useCompletion({
-      api: "/api/completion",
-    });
-
-
-
-  // const text = useCompletion({})
+  const { completion, handleSubmit, input, handleInputChange } = useCompletion({
+    api: "/api/completion",
+  });
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -24,12 +19,10 @@ export default function Home() {
           value={input}
           onChange={handleInputChange}
         ></textarea>
-        <button className="rounded-md bg-[#003566] text-white transition-all p-2 mt-2">
+        <button className="rounded-md bg-[#003566] text-white transition-all px-4 py-2 mt-2">
           Analyze
         </button>
       </form>
-      <p>{completion}</p>
-      {/* <h1>text?.links</h1> */}
     </div>
   );
 }
