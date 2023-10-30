@@ -1,5 +1,7 @@
 import Image from "next/image"
 import Link from 'next/link'
+import {BiSolidGroup} from 'react-icons/bi'
+
 
 export default function Header() {
     return (
@@ -15,8 +17,8 @@ export default function Header() {
                         <Link className="hover:underline-offset-2 hover:underline" href='./explain'>Explain</Link>
                     </div>
                 </div>
-                <div>
-                    <button className="md:text-md text-sm font-medium border-2 border-[#003566] rounded-md px-2 py-1 hover:bg-[#003566] hover:text-white">Login</button>
+                <div className="text-2xl hover:text-[#003566] hover:text-3xl">
+                    <BiSolidGroup classname=''/>
                 </div>
             </div>
         </>

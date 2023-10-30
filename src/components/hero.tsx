@@ -10,7 +10,10 @@ export default function Hero() {
                         YOUR NEW STEP TO <br className="none lg:block" />
                         PRODUCTIVE FUTURE
                     </h1>
-                    <h3 className="font-regular text-xl my-5">
+                    <h2 className='font-semibold text-xl mt-2'>
+                        Change, experience, and innovate your studying process
+                    </h2>
+                    <h3 className="font-regular text-xl mt-3 mb-5">
                         413 team will help you to study effectively
                     </h3>
                     <Link href="./feedback">

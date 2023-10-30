@@ -27,7 +27,7 @@ export async function POST(request: Request) {
       {
         role: "system",
         content:
-          "You need to shorten the user's conspect and make it easy to understand for anyone who knows nothing about the topic. Always write 'goodbye' in the end",
+          "You need to shorten the user's conspect and make it easy to understand for anyone who knows nothing about the topic. Provide at least 3 reliable links to further exploration.",
       },
       ...messages,
     ],
