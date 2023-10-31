@@ -36,7 +36,7 @@ ${prompt}
 Output:\n`,
       },
     ],
-    max_tokens: 512,
+    max_tokens: 1000,
     temperature: 1, 
     top_p: 1,
     frequency_penalty: 1,

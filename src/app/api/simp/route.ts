@@ -26,7 +26,7 @@ ${prompt}
 Output:\n`,
       },
     ],
-    max_tokens: 200,
+    max_tokens: 1000,
     temperature: 0, // you want absolute certainty for spell check
     top_p: 1,
     frequency_penalty: 1,
