@@ -7,7 +7,7 @@ export default function About() {
     return (
         <div className="mx-6 grid">
             <h1 className="text-3xl mb-10 text-center font-bold">ABOUT FEYNAPP</h1>
-            <div className='grid grid-cols-2 gap-10'>
+            <div className='grid md:grid-cols-2 grid-cols-1 gap-10'>
 
                 <div className="mb-10">
                     <h1 className="font-bold text-2xl mb-4 flex items-center gap-2"><PiTargetBold className="text-[#003566]" />The goal</h1>

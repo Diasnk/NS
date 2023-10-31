@@ -9,10 +9,10 @@ export default function Hero() {
                     <h3 className=''>
                         413 team will help you study effectively
                     </h3>
-                    <h1 className='text-5xl tracking-tight mt-3 mb-3 font-extrabold'>
+                    <h1 className='md:text-5xl text-3xl tracking-tight mt-3 mb-3 font-extrabold'>
                         YOUR <span className='text-[#5A6AE1]'>NEW</span> STEP TO <br></br>
                     </h1>
-                    <h1 className='text-5xl tracking-tight mb-5 font-extrabold'>
+                    <h1 className='md:text-5xl text-3xl tracking-tight mb-5 font-extrabold'>
                         <span className='text-[#5A6AE1]'>PRODUCTIVE</span> FUTURE
 
                     </h1>
