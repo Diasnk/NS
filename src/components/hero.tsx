@@ -6,6 +6,7 @@ export default function Hero() {
         <>
             <div className='h-screen flex justify-center items-center aling-center text-center'>
                 <div className='mb-10'>
+                    <Image width={100} height={100} src="/public.logo" alt='logo'/>
                     <h3 className=''>
                         413 team will help you study effectively
                     </h3>
